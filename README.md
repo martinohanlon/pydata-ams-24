@@ -1,8 +1,6 @@
 # Pydata Amsterdam 2024
 
-Code examples from the *GenAI Beyond Chat with RAG, Knowledge Graphs and Python* talk at Pydata Amsterdam 2024.
-
-
+Slides and code examples from the [GenAI Beyond Chat with RAG, Knowledge Graphs and Python talk](https://amsterdam2024.pydata.org/cfp/talk/F9AWKJ/) at Pydata Amsterdam 2024.
 
 ## Database
 
