@@ -8,7 +8,7 @@ You will need a Neo4j database loaded with the [recommendations dataset](https:/
 
 You can create a new _recommendations_ sandbox at [sandbox.neo4j.com](https://sandbox.neo4j.com).
 
-Update the recommendations dataset with embeddings and vector indexes by running the `cypher\update_graph.cypher` Cypher.
+Update the recommendations dataset with embeddings and vector indexes by running the `cypher\create_graph.cypher` Cypher script.
 
 ## OpenAI
 
