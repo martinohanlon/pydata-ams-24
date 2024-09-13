@@ -1,0 +1,59 @@
+{
+	"Import plot tool": {
+		"prefix": "importtool",
+		"body": [
+			"from plot_retriever import get_movie_plot",
+		]
+	},
+
+	"Plot tool": {
+		"prefix": "tool",
+		"body": [
+			"Tool.from_function(",
+			"    name='Movie Plot Search',",
+			"    description='For when you need to find information about movies based on a plot',",
+			"    func=get_movie_plot,",
+			")"
+		]
+	},
+
+	"Surf - add context to prompt": {
+		"prefix": "surfprompt",
+		"body": [
+			"( 'system', '{context}' ),",
+		]
+	},
+
+	"Surf - weather forecast": {
+		"prefix": "surfforecast",
+		"body": [
+			"current_weather = '''",
+				"{",
+					"'surf': [",
+						"{'beach': 'Fistral', 'conditions': '6ft waves and offshore winds'},",
+						"{'beach': 'Polzeath', 'conditions': 'Flat and calm'},",
+						"{'beach': 'Watergate Bay', 'conditions': '3ft waves and onshore winds'}",
+					"]",
+				"}'''",
+			"]"
+		]
+	},
+	
+	"Surf - invoke": {
+		"prefix": "surfinvoke",
+		"body": [
+			"'context': current_weather,",
+		]
+	},
+
+	"Add graph to retriever" : 
+	{
+		"prefix": "graphretriever",
+		"body": [
+			"directors: [ (person)-[:DIRECTED]->(node) | person.name ],",
+			"actors: [ (person)-[r:ACTED_IN]->(node) | [person.name, r.role] ],",
+        	"genres: [ (node)-[:IN_GENRE]->(genre) | genre.name ]",
+		]
+	}
+
+}

@@ -12,27 +12,27 @@ from langchain_core.prompts import ChatPromptTemplate
 
 llm = ChatOpenAI(
     openai_api_key=os.getenv('OPENAI_API_KEY'),
-    model="gpt-4"
+    model='gpt-4'
     )
 
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'))
 
 graph = Neo4jGraph(
-    url=os.getenv("NEO4J_URI"),
-    username=os.getenv("NEO4J_USERNAME"),
-    password=os.getenv("NEO4J_PASSWORD"),
+    url=os.getenv('NEO4J_URI'),
+    username=os.getenv('NEO4J_USERNAME'),
+    password=os.getenv('NEO4J_PASSWORD'),
 )
 
 neo4jvector = Neo4jVector.from_existing_index(
     embeddings,
     graph=graph,
-    index_name="moviePlots",
-    node_label="Movie",
-    text_node_property="plot",
-    embedding_node_property="plotEmbedding",
-    retrieval_query="""
+    index_name='moviePlots',
+    node_label='Movie',
+    text_node_property='plot',
+    embedding_node_property='plotEmbedding',
+    retrieval_query='''
 RETURN
-    node.title + " - " + node.plot AS text,
+    node.title + ' - ' + node.plot AS text,
     score,
     {
         title: node.title,
@@ -42,21 +42,21 @@ RETURN
         tmdbId: node.tmdbId,
         source: 'https://www.themoviedb.org/movie/'+ node.tmdbId
     } AS metadata
-"""
+'''
 )
 
 retriever = neo4jvector.as_retriever()
 
 instructions = (
-    "Use the given context to answer the question."
-    "If you don't know the answer, say you don't know."
-    "Context: {context}"
+    'Use the given context to answer the question.'
+    'If you dont know the answer, say you dont know.'
+    'Context: {context}'
 )
 
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", instructions),
-        ("human", "{input}"),
+        ('system', instructions),
+        ('human', '{input}'),
     ]
 )
 
@@ -67,10 +67,10 @@ plot_retriever = create_retrieval_chain(
 )
 
 def get_movie_plot(input):
-    return plot_retriever.invoke({"input": input})
+    return plot_retriever.invoke({'input': input})
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    plot = input("> ")
+    plot = input('> ')
     response = get_movie_plot(plot)
     print(response)

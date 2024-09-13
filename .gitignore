@@ -1,5 +1,7 @@
 .vscode
 .env
+!*/
+!.vscode/demo.code-snippets
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
