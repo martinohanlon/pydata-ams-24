@@ -1,3 +1,4 @@
+// Vector - like toy story
 MATCH (m:Movie {title: 'Toy Story'})
 
 CALL db.index.vector.queryNodes('moviePlots', 6, m.plotEmbedding)
