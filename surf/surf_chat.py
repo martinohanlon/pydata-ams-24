@@ -29,3 +29,24 @@ while True:
     question = input('> ')
     response = chat_chain.invoke({'question': question})
     print(response)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# snippets
+# surfprompt
+# surfforecast
+# surfinvoke 

@@ -67,3 +67,11 @@ while True:
 # what genres are movies about aliens landing on earth in?
 # who acted in movies with plots about aliens landing on earth?
 # who directed the movie that is about vectors, knowledge graphs and genai?
+
+
+
+
+
+# snippets
+# importtool
+# tool
