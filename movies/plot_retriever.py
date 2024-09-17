@@ -37,7 +37,7 @@ RETURN
     {
         title: node.title,
         tmdbId: node.tmdbId,
-        source: 'https://www.themoviedb.org/movie/'+ node.tmdbId,
+        source: 'https://www.themoviedb.org/movie/'+ node.tmdbId
     } AS metadata
 '''
 )
