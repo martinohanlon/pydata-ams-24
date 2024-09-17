@@ -2,7 +2,7 @@
 	"Import plot tool": {
 		"prefix": "importtool",
 		"body": [
-			"from plot_retriever import get_movie_plot",
+			"from plot_retriever_with_graph import get_movie_plot",
 		]
 	},
 
@@ -35,7 +35,6 @@
 						"{'beach': 'Watergate Bay', 'conditions': '3ft waves and onshore winds'}",
 					"]",
 				"}'''",
-			"]"
 		]
 	},
 	
