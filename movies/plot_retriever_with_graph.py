@@ -74,3 +74,27 @@ if __name__ == '__main__':
     plot = input('> ')
     response = get_movie_plot(plot)
     print(response)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Queries
+
+# a hilarious road trip
+# Toys come alive
+# get as far away from humanity as possible
